@@ -1,3 +1,4 @@
+import 'boxicons'
 
 export const Header = () => {
     return (
@@ -8,7 +9,9 @@ export const Header = () => {
                         <img src="/assets/logo.png" alt="logo" className="img" />
                     </a>
                     <h1 className="encabezado">Banco Innovación Financiera</h1>
-                    <a href="../index.html" className="logout"><i className='bx bx-log-out'></i></a>
+                    <a href="../index.html" className="logout">
+                        <box-icon name='log-out' color='#fff'></box-icon>
+                    </a>
                 </div>
             </header>
         </>
