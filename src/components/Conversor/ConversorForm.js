@@ -2,11 +2,11 @@ export default function ConversorForm() {
     return (
         <div className="containerM">
             <form action="" className="containerForm">
-                <label for="moneda">Ingrese cantidad de pesos que quiere convertir</label>
+                <label htmlFor="moneda">Ingrese cantidad de pesos que quiere convertir</label>
                 <input type="number" className="inputMoneda" name="moneda" id="moneda" step="0.1" placeholder="0" />
 
                 <div className="options">
-                    <label for="currency">Moneda de destino</label>
+                    <label htmlFor="currency">Moneda de destino</label>
                     <select name="" id="currency">
                         <option value="DOLAR BLUE">DOLAR BLUE</option>
                         <option value="EUR">EURO</option>

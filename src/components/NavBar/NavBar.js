@@ -3,7 +3,7 @@ import Funciones from "./Funciones";
 
 export default function NavBar() {
     return (
-        <nav class="navP">
+        <nav className="navP">
             <Menu></Menu>
             <Funciones></Funciones>
         </nav>

@@ -1,12 +1,12 @@
 export default function Menu() {
     return (
         <>
-            <h3 class="navbarP">Menú</h3>
-            <ul class="menuP">
-                <li><a href="inicio.html" class="li">Inicio</a></li>
-                <li><a href="cuentas.html" class="li">Cuentas</a></li>
-                <li><a href="tranferencias.html" class="li">Transferencias</a></li>
-                <li><a href="pagos.html" class="li">Pagos</a></li>
+            <h3 className="navbarP">Menú</h3>
+            <ul className="menuP">
+                <li><a href="inicio.html" className="li">Inicio</a></li>
+                <li><a href="cuentas.html" className="li">Cuentas</a></li>
+                <li><a href="tranferencias.html" className="li">Transferencias</a></li>
+                <li><a href="pagos.html" className="li">Pagos</a></li>
             </ul>
         </>
     )
