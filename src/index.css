@@ -1,13 +1,545 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ESTILOS GENERALES */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+li,
+a {
+    list-style: none;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* ENCABEZADO */
+.header {
+    background-color: #001F3F;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: end;
+    align-items: center;
+}
+
+.img {
+    height: 100px;
+    position: relative;
+    top: 0;
+    right: 47px;
+
+}
+
+.encabezado {
+    margin-right: 20px;
+    text-align: center;
+}
+
+.logout {
+    font-size: 30px;
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.logout:hover {
+    color: #ccc;
+    transform: scale(1.1);
+}
+
+/* BARRA LATERAL */
+
+.contenedorNyM {
+    display: flex;
+}
+
+.navP {
+    background-color: #f4f4f4;
+    padding: 20px;
+    flex: 0.3;
+}
+
+.main {
+    padding: 20px;
+    flex: 2;
+}
+
+.menuP {
+    list-style: none;
+}
+
+.li {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.li:hover {
+    font-size: 20px;
+    color: #696969;
+    transform: scale(100px);
+}
+
+.contenedorf {
+    margin-top: 40px;
+}
+
+/* CONTENIDO PRINCIPAL */
+.main {
+    min-height: 511px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.mainPago {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.mainInicio {
+    flex-direction: column;
+}
+
+.carousel {
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.cardCarousel {
+    margin: 0 auto;
+    width: 650px;
+    box-shadow: 5px 5px 5px #ccc;
+    background-color: #fffcfc;
+}
+
+.title {
+    text-align: center;
+}
+
+.contenedorCard {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.listA {
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.olcards,
+.olcards * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.olcards {
+    list-style: none;
+    counter-reset: cardCount;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    --cardsGap: 1rem;
+    gap: var(--cardsGap);
+    padding-bottom: var(--cardsGap);
+}
+
+.olcards li {
+    counter-increment: cardCount;
+    display: flex;
+    color: white;
+    --labelOffset: 1rem;
+    --arrowClipSize: 1.5rem;
+    margin-top: var(--labelOffset);
+}
+
+.olcards li::before {
+    content: counter(cardCount, decimal-leading-zero);
+    background: white;
+    color: var(--cardColor);
+    font-size: 2em;
+    font-weight: 700;
+    transform: translateY(calc(-1 * var(--labelOffset)));
+    margin-right: calc(-1 * var(--labelOffset));
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 0.5em;
+}
+
+.olcards li .content {
+    background-color: var(--cardColor);
+    --inlinePadding: 1em;
+    --boxPadding: 0.5em;
+    display: grid;
+    padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize)) var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
+    grid-template-areas:
+        "icon title"
+        "icon text";
+    gap: 0.25em 1em;
+    clip-path: polygon(0 0,
+            calc(100% - var(--arrowClipSize)) 0,
+            100% 50%,
+            calc(100% - var(--arrowClipSize)) 100%,
+            calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)),
+            0 calc(100% + var(--cardsGap)));
+    position: relative;
+}
+
+.olcards li .content::before {
+    content: "";
+    position: absolute;
+    width: var(--labelOffset);
+    height: var(--labelOffset);
+    background: var(--cardColor);
+    left: 0;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    filter: brightness(0.75);
+}
+
+.olcards li .content::after {
+    content: "";
+    position: absolute;
+    height: var(--cardsGap);
+    width: var(--cardsGap);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
+    left: 0;
+    top: 100%;
+}
+
+.olcards li .icon {
+    grid-area: icon;
+    align-self: center;
+    font-size: 2em;
+}
+
+.olcards li .content .title {
+    grid-area: title;
+    font-size: 1.25em;
+    /* font-weight: 700; */
+}
+
+.olcards li .content .text {
+    grid-area: text;
+}
+
+
+.mainT {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    gap: 20px;
+}
+
+.payment-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.payment-item:hover {
+    background-color: #ccc;
+}
+
+.paymentTitle {
+    display: block;
+    margin-top: 20px;
+    grid-column: 2/4;
+}
+
+.paragraphDate {
+    display: block;
+    margin-top: 20px;
+    grid-column: 1/2;
+}
+
+.paragraphAmount {
+    display: block;
+    margin-top: 20px;
+    grid-column: 2/3;
+}
+
+.paragraphDescription {
+    display: block;
+    margin-top: 20px;
+    grid-column: 3/5;
+}
+
+/* Estilos para los iconos */
+.prev-button,
+.next-button {
+    background-color: rgba(0, 0, 0, 0.0);
+    /* Fondo semi-transparente */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 24px;
+    /* Tamaño del icono */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-button {
+    left: 20px;
+}
+
+.next-button {
+    right: 20px;
+}
+
+
+.moneda {
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+#currency {
+    margin-bottom: 20px;
+}
+
+#calculateButton {
+    margin-top: 20px;
+}
+
+.tituloMoneda {
+    text-align: center;
+}
+
+.sesion {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contenedorM {
+    margin-top: 50px;
+    width: 400px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.inputMoneda,
+.inputPrestamo {
+    margin: 0 auto;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.inputMoneda {
+    width: 300px;
+}
+
+select {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.containerForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.inputField {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.options {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+label {
+    text-align: center;
+}
+
+button {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+.inputSubmit {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.inputSubmit:hover {
+    background-color: #0056b3;
+}
+
+.resultBox {
+    font-size: 20px;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-top: 30px;
+}
+
+.containerPrestamo {
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.tituloPrestamo {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    margin-top: 20px;
+}
+
+.containerLabel {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerM {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.containerA {
+    padding: 20px;
+}
+
+
+.formContainer {
+    width: 100%;
+}
+
+/* PIE DE PAGINA */
+.footer {
+    clear: both;
+    background-color: #001F3F;
+    color: #fff;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    margin-right: 20px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.containerCuenta {
+    display: flex;
+    margin-right: 20px;
+    margin-top: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 1100px;
+}
+
+.cajaIcons {
+    display: flex;
+    transition: all 0.3s ease-in-out;
+}
+
+.boxFooter {
+    margin: 10px;
+}
+
+.cajaUl {
+    display: flex;
+}
+
+.icon {
+    color: #FFFFFF;
+}
+
+.footerP {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.footerP:hover {
+    color: #ccc;
+    transform: translateY(-10px);
+}
+
+.aIcon {
+    font-size: 25px;
+    margin-right: 20px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    color: #fff;
+}
+
+.aIcon:hover {
+    transform: scale(1.2);
+    color: #ccc;
+}
+
+@media (max-width:650px) {
+    .cajaUl {
+        flex-direction: column;
+    }
 }
