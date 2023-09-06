@@ -1,10 +1,9 @@
-import Conversor from "../Conversor/Conversor"
-import { Inicio } from "../Inicio/Inicio"
+import { Transferencias } from "../Transferencias/Transferencias"
 
 export const Main = () => {
     return (
         <>
-            <Inicio></Inicio>
+            <Transferencias></Transferencias>
         </>
     )
 }
