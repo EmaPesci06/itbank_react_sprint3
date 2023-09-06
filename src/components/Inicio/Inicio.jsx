@@ -8,6 +8,7 @@ export const Inicio = () => {
             <main className="main mainInicio">
 
                 <h2 className="title">Bienvenido a Innovacion Financiera Online Banking</h2>
+
                 <CarouselCard></CarouselCard>
 
                 <CardCompoenent></CardCompoenent>
