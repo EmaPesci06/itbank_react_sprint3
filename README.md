@@ -56,3 +56,8 @@ La aplicación ha sido diseñada para ser responsive y se adaptará a las pantal
 ## Contribuir
 
 Las contribuciones son siempre bienvenidas. Por favor, lee las guías de contribución / TO DO / antes de realizar un pull request.
+
+
+## Integrantes
+#### - Emanuel Pesci
+#### - Martin Rodriguez
