@@ -1,71 +1,58 @@
-# Getting Started with Create React App
+# Home Banking - Innovación Financiera
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto contiene la web del Home Banking desarrollada para Innovación Financiera. La aplicación se desarrolló con React y está diseñada para proporcionar una variedad de funciones bancarias en un formato fácil de usar y comprensible para los usuarios.
 
-## Available Scripts
+La página contiene las secciones:
 
-In the project directory, you can run:
+- 'Inicio'
+- 'Cuentas'
+- 'Conversor de Monedas'
+- 'Pago de Facturas'
+- 'Préstamos'
+- 'Transferencias'.
 
-### `npm start`
+## Secciones
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Inicio
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Esta es la página de inicio de la aplicación, ofrece una visión general de las características de la plataforma, junto con información útil del banco Innovación Financiera.
 
-### `npm test`
+### Cuentas
+En esta sección, los usuarios pueden ver y administrar sus cuentas además de verificar sus saldos. También permite la inclusión de nuevas cuentas.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Transferencias
+Los usuarios pueden realizar transferencias entre sus cuentas o a cuentas de otros, de una manera segura y efectiva. Además, se puede llevar cuenta de transferencias previamente realizadas.
 
-### `npm run build`
+### Pagos
+Los usuarios pueden pagar sus facturas directamente desde esta sección, proporcionando un método fácil y sin complicaciones para mantener sus facturas al día. Esta sección ademas permite adherir nuevos pagos para llevar cuenta de las responsabilidades financieras del usuario.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Conversor de Monedas
+Esta función permite a los usuarios convertir diferentes monedas a las tasas de cambio en tiempo real.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Préstamos
+Los usuarios pueden simular préstamos, modificando los parámetros para encontrar el formato que mejor se adecue a sus necesidades.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Instalación
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Asegurate de tener Node.js y npm instalados en tu PC.
+Luego simplemente cloná el repositorio y ejecutá `npm install` para instalar todas las dependencias necesarias:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. `git clone https://github.com/marneo23/itbank_react.git`
+### 2. `cd itbank_react`
+### 3. `npm install`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Ejecución
 
-## Learn More
+Para levantar la aplicación, utiliza el comando `npm run start`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Esto inicializa la web en tu navegador. Podés acceder a ella en [http://localhost:3000](http://localhost:3000).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Responsiveness
 
-### Code Splitting
+La aplicación ha sido diseñada para ser responsive y se adaptará a las pantallas de los dispositivos móviles y de escritorio.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contribuir
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# itbank_react
+Las contribuciones son siempre bienvenidas. Por favor, lee las guías de contribución / TO DO / antes de realizar un pull request.
