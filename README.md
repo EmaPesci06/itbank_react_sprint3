@@ -49,13 +49,10 @@ Para levantar la aplicación, utiliza el comando `npm run start`.
 
 Esto inicializa la web en tu navegador. Podés acceder a ella en [http://localhost:3000](http://localhost:3000).
 
-## Responsiveness
-
-La aplicación ha sido diseñada para ser responsive y se adaptará a las pantallas de los dispositivos móviles y de escritorio.
 
 ## Contribuir
 
-Las contribuciones son siempre bienvenidas. Por favor, lee las guías de contribución / TO DO / antes de realizar un pull request.
+Las contribuciones son siempre bienvenidas. Por favor, lee las guías de contribución antes de realizar un pull request.
 
 
 ## Integrantes
