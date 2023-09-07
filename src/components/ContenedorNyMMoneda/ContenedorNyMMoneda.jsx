@@ -1,11 +1,11 @@
-import { Main } from "../Main/Main"
+import { Moneda } from "../Moneda/Moneda"
 import NavBar from "../NavBar/NavBar"
 
-export const ContenedorNyM = () => {
+export const ContenedorNyMMoneda = () => {
     return (
         <div className="contenedorNyM">
             <NavBar></NavBar>
-            <Main></Main>
+            <Moneda></Moneda>
         </div>
     )
 }

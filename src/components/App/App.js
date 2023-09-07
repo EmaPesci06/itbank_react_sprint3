@@ -1,15 +1,11 @@
 import './App.css';
-import { Header } from '../Header/Header';
-import { Footer } from '../Footer/Footer';
-import { ContenedorNyM } from '../ContenedorNyM/ContenedorNyM';
+import { HomePage } from '../HomePage/HomePage';
 
 
 function App() {
   return (
     <>
-      <Header></Header>
-      <ContenedorNyM></ContenedorNyM>
-      <Footer></Footer>
+      <HomePage></HomePage>
     </>
   );
 }
