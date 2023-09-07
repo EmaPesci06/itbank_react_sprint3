@@ -71,7 +71,7 @@ export default function ConversorForm() {
           >
             Convertir
           </button>
-          <div id="resultBox"></div>
+          <div id="resultBox" className='mt-2 text-center'></div>
         </div>
       </form>
     </div>

@@ -6,9 +6,9 @@ export const Header = () => {
         <>
             <header className="header">
                 <div className="contenedor">
-                    <a href="#">
+                    <Link to="/">
                         <img src="/assets/logo.png" alt="logo" className="img" />
-                    </a>
+                    </Link>
                     <h1 className="encabezado">Banco Innovación Financiera</h1>
                     <Link to="/login" className="logout">
                         <box-icon name='log-out' color='#fff'></box-icon>
