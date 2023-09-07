@@ -108,11 +108,15 @@ a {
 .mainPago {
     flex-direction: column;
     justify-content: flex-start;
-    height: 78vh;
+    min-height: 78vh;
 }
 
 .mainInicio {
     flex-direction: column;
+}
+
+.mainLogin{
+    height: 68.3vh;
 }
 
 .carousel {
