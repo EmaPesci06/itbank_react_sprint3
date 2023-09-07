@@ -1,5 +1,5 @@
-import NavBar from "../NavBar/NavBar"
-import { Transferencias } from "../Transferencias/Transferencias"
+import NavBar from "../../NavBar/NavBar"
+import { Transferencias } from "../../Transferencias/Transferencias"
 
 export const ContenedorNyMTransferencias = () => {
     return (

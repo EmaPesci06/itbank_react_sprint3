@@ -1,5 +1,5 @@
-import { Cuentas } from "../Cuentas/Cuentas"
-import NavBar from "../NavBar/NavBar"
+import { Cuentas } from "../../Cuentas/Cuentas"
+import NavBar from "../../NavBar/NavBar"
 
 export const ContenedorNyMCuentas = () => {
     return (

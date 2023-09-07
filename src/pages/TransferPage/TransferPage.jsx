@@ -1,4 +1,4 @@
-import { ContenedorNyMTransferencias } from "../../components/ContenedorNyMTransferencias/ContenedorNyMTransferencias"
+import { ContenedorNyMTransferencias } from "../../components/Containers/ContenedorNyMTransferencias/ContenedorNyMTransferencias"
 import { Footer } from "../../components/Footer/Footer"
 import { Header } from "../../components/Header/Header"
 

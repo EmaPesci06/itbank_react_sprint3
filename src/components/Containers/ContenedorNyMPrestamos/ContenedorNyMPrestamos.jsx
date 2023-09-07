@@ -1,5 +1,5 @@
-import NavBar from "../NavBar/NavBar"
-import { Prestamo } from "../Prestamo/Prestamo"
+import NavBar from "../../NavBar/NavBar"
+import { Prestamo } from "../../Prestamo/Prestamo"
 
 export const ContenedorNyMPrestamos = () => {
     return (

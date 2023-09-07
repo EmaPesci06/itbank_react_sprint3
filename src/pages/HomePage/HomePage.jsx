@@ -1,4 +1,4 @@
-import { ContenedorNyMInicio } from "../../components/ContenedorNyMInicio/ContenedorNyMInicio"
+import { ContenedorNyMInicio } from "../../components/Containers/ContenedorNyMInicio/ContenedorNyMInicio"
 import { Footer } from "../../components/Footer/Footer"
 import { Header } from "../../components/Header/Header"
 

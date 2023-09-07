@@ -1,5 +1,5 @@
-import { Moneda } from "../Moneda/Moneda"
-import NavBar from "../NavBar/NavBar"
+import { Moneda } from "../../Moneda/Moneda"
+import NavBar from "../../NavBar/NavBar"
 
 export const ContenedorNyMMoneda = () => {
     return (

@@ -1,5 +1,5 @@
-import { Error } from "../Error/Error"
-import NavBar from "../NavBar/NavBar"
+import { Error } from "../../Error/Error"
+import NavBar from "../../NavBar/NavBar"
 
 export const ContenedorNyMError = () => {
     return (

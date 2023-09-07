@@ -1,5 +1,5 @@
-import { Inicio } from "../Inicio/Inicio"
-import NavBar from "../NavBar/NavBar"
+import { Inicio } from "../../Inicio/Inicio"
+import NavBar from "../../NavBar/NavBar"
 
 export const ContenedorNyMInicio = () => {
     return (
