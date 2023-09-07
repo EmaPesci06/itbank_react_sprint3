@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 export const Login = () => {
+    const navigate = useNavigate();
+
     const [values, setValues] = useState({
         email: "",
         password: "",
@@ -41,6 +43,10 @@ export const Login = () => {
         } else {
             console.log("El formulario no es válido");
         }
+
+        if (validateForm()) {
+            navigate("/inicio");
+        }
     };
 
     const handleChange = (e) => {
@@ -54,7 +60,7 @@ export const Login = () => {
 
     return (
         <main className="main">
-            <div className="contenedorM">
+            <div className="contenedorM mainLogin">
                 <h2 className="sesion">Iniciar Sesión</h2>
                 <form action="" id="loginForm" onSubmit={handleSubmit}>
                     <label htmlFor="user" className="form-label">

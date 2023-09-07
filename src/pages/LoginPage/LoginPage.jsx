@@ -1,11 +1,11 @@
 import { Footer } from "../../components/Footer/Footer"
-import { Header } from "../../components/Header/Header"
+import { HeaderLogin } from "../../components/Header/HeaderLogin"
 import { Login } from "../../components/Login/Login"
 
 export const LoginPage = () => {
     return (
         <>
-            <Header></Header>
+            <HeaderLogin></HeaderLogin>
             <Login></Login>
             <Footer></Footer>
         </>
