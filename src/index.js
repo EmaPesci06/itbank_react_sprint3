@@ -12,15 +12,17 @@ import { PagosPage } from './pages/PagosPage/PagosPage';
 import { MonedaPage } from './pages/MonedaPage/MonedaPage';
 import { PrestamoPage } from './pages/PrestamoPage/PrestamoPage';
 import { LoginPage } from './pages/LoginPage/LoginPage';
+import { ErrorPage } from './pages/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
-    path: "/*",
-    element: <HomePage></HomePage>
+    path: "/",
+    element: <LoginPage></LoginPage>,
+    errorElement: <ErrorPage></ErrorPage>
   },
   {
-    path: "/login",
-    element: <LoginPage></LoginPage>
+    path: "/inicio",
+    element: <HomePage></HomePage>
   },
   {
     path: "/cuentas",

@@ -1,23 +1,94 @@
+import React, { useState } from "react";
+import { Link, Navigate } from "react-router-dom";
 
 export const Login = () => {
+    const [values, setValues] = useState({
+        email: "",
+        password: "",
+    });
+
+    const [errors, setErrors] = useState({
+        email: "",
+        password: "",
+    });
+
+    const validateForm = () => {
+        let isValid = true;
+        const newErrors = { email: "", password: "" };
+
+        if (!values.email) {
+            newErrors.email = "El correo electrónico es obligatorio";
+            isValid = false;
+        } else if (!/\S+@\S+\.\S+/.test(values.email)) {
+            newErrors.email = "Dirección de correo electrónico no válida";
+            isValid = false;
+        }
+
+        if (!values.password || values.password.length < 8) {
+            newErrors.password = "La contraseña debe tener al menos 8 caracteres";
+            isValid = false;
+        }
+
+        setErrors(newErrors);
+        return isValid;
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (validateForm()) {
+            console.log("El formulario es válido");
+        } else {
+            console.log("El formulario no es válido");
+        }
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+
+        setValues({
+            ...values,
+            [name]: value,
+        });
+    };
+
     return (
-        <main class="main">
-            <div class="contenedorM">
-                <h2 class="sesion">Iniciar Sesión</h2>
-                <form action="" id="loginForm">
-                    <label for="user" class="form-label">Usuario</label>
-                    <input type="text" name="usuario" id="user" class="form-control" />
-                    <div class="form-text">Ingrese un email valido</div>
+        <main className="main">
+            <div className="contenedorM">
+                <h2 className="sesion">Iniciar Sesión</h2>
+                <form action="" id="loginForm" onSubmit={handleSubmit}>
+                    <label htmlFor="user" className="form-label">
+                        Usuario
+                    </label>
+                    <input
+                        type="text"
+                        name="email"
+                        id="user"
+                        className="form-control"
+                        value={values.email}
+                        onChange={handleChange}
+                    />
+                    <div className="error-message" style={{ 'color': 'red' }}>{errors.email}</div>
 
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" name="contraseña" id="password" class="form-control"
-                        aria-describedby="descriptionP" />
-                    <div id="descriptionP" class="form-text">Ingrese una contraseña con 8 caracteres</div>
+                    <label htmlFor="password" className="form-label">
+                        Contraseña
+                    </label>
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        className="form-control"
+                        aria-describedby="descriptionP"
+                        value={values.password}
+                        onChange={handleChange}
+                    />
+                    <div className="error-message" style={{ 'color': 'red' }}>{errors.password}</div>
 
-                    <button type="submit" name="Enviar" id="submit" class="btn btn-primary mt-4">Enviar</button>
+                    <button disabled={!validateForm} type="submit" name="Enviar" id="submit" className="btn btn-primary mt-4">
+                        Enviar
+                    </button>
                 </form>
-
             </div>
         </main>
-    )
-}
+    );
+};
