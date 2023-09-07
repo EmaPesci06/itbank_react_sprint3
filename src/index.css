@@ -108,6 +108,7 @@ a {
 .mainPago {
     flex-direction: column;
     justify-content: flex-start;
+    height: 78vh;
 }
 
 .mainInicio {
@@ -438,6 +439,7 @@ button {
 .containerPrestamo {
     flex-direction: column;
     margin-top: 20px;
+    height: 71.6vh;
 }
 
 .tituloPrestamo {
@@ -464,6 +466,7 @@ label {
     width: fit-content;
     margin: 0 auto;
     margin-top: 30px;
+    height: 65.5vh;
 }
 
 .containerA {
