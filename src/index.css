@@ -1,13 +1,6 @@
 /* ESTILOS GENERALES */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
-:root {
-    --cardColor1: #fc374e;
-    --cardColor2: #36aeb3;
-    --cardColor3: #162d59;
-    --cardColor4: #f15f0e;
-}
-
 
 * {
     margin: 0;
@@ -53,7 +46,9 @@ a {
 }
 
 .logout {
-    font-size: 30px;
+    display: block;
+    height: 36px;
+    width: 36px;
     color: #fff;
     transition: all .3s ease-in-out;
 }

@@ -1,4 +1,5 @@
 import 'boxicons'
+import { Link } from 'react-router-dom'
 
 export const Header = () => {
     return (
@@ -9,9 +10,9 @@ export const Header = () => {
                         <img src="/assets/logo.png" alt="logo" className="img" />
                     </a>
                     <h1 className="encabezado">Banco Innovación Financiera</h1>
-                    <a href="../index.html" className="logout">
+                    <Link to="/login" className="logout">
                         <box-icon name='log-out' color='#fff'></box-icon>
-                    </a>
+                    </Link>
                 </div>
             </header>
         </>

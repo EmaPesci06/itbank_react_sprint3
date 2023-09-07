@@ -1,7 +1,7 @@
 import React from 'react'
-import { Header } from '../Header/Header'
-import { Footer } from '../Footer/Footer'
-import { ContenedorNyMPagos } from '../ContenedorNyMPagos/ContenedorNyMPagos'
+import { Header } from '../../components/Header/Header'
+import { Footer } from '../../components/Footer/Footer'
+import ContenedorNyMPagos from '../../components/ContenedorNyMPagos/ContenedorNyMPagos'
 
 export const PagosPage = () => {
     return (
