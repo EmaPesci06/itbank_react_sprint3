@@ -67,13 +67,13 @@ export const Prestamo = () => {
           </div>
           <button
             type="button"
-            className="btn btn-primary"
+            className="btn btn-primary mt-3"
             onClick={handleCalculate}
           >
             Calcular
           </button>
 
-          <div id="result">{resultado}</div>
+          <div id="result" className='mt-2 text-center'>{resultado}</div>
         </div>
       </div>
     </main>
