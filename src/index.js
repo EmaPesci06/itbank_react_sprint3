@@ -4,18 +4,23 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { HomePage } from './components/HomePage/HomePage';
-import { CuentasPage } from './components/CuentasPage/CuentasPage';
-import { TransferPage } from './components/TransferPage/TransferPage';
-import { PagosPage } from './components/PagosPage/PagosPage';
-import { MonedaPage } from './components/MonedaPage/MonedaPage';
-import { PrestamoPage } from './components/PrestamoPage/PrestamoPage';
 
+import { HomePage } from './pages/HomePage/HomePage';
+import { CuentasPage } from './pages/CuentasPage/CuentasPage';
+import { TransferPage } from './pages/TransferPage/TransferPage';
+import { PagosPage } from './pages/PagosPage/PagosPage';
+import { MonedaPage } from './pages/MonedaPage/MonedaPage';
+import { PrestamoPage } from './pages/PrestamoPage/PrestamoPage';
+import { LoginPage } from './pages/LoginPage/LoginPage';
 
 const router = createBrowserRouter([
   {
     path: "/*",
     element: <HomePage></HomePage>
+  },
+  {
+    path: "/login",
+    element: <LoginPage></LoginPage>
   },
   {
     path: "/cuentas",
