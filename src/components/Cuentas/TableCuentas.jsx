@@ -1,5 +1,5 @@
 
-export const TableCuentas = () => {
+export const TableCuentas = ({ accounts }) => {
     return (
         <table className="table table-hover" id="table">
             <thead className="table-dark">
@@ -29,6 +29,14 @@ export const TableCuentas = () => {
                     <td>$2,300</td>
                     <td>Cuenta de Ahorros</td>
                 </tr>
+                {accounts.map((account, index) => (
+                    <tr key={index}>
+                        <td>{account.number}</td>
+                        <td>{account.name}</td>
+                        <td>{account.balance}</td>
+                        <td>{account.type}</td>
+                    </tr>
+                ))}
             </tbody>
         </table>
     );
