@@ -1,12 +1,16 @@
-import { ContenedorNyMMoneda } from "../../components/Containers/ContenedorNyMMoneda/ContenedorNyMMoneda"
 import { Footer } from "../../components/Footer/Footer"
 import { Header } from "../../components/Header/Header"
+import { Moneda } from "../../components/Moneda/Moneda"
+import NavBar from "../../components/NavBar/NavBar"
 
 export const MonedaPage = () => {
     return (
         <>
             <Header></Header>
-            <ContenedorNyMMoneda></ContenedorNyMMoneda>
+            <div className="contenedorNyM">
+                <NavBar></NavBar>
+                <Moneda></Moneda>
+            </div>
             <Footer></Footer>
         </>
     )
