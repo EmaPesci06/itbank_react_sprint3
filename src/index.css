@@ -115,7 +115,7 @@ a {
     flex-direction: column;
 }
 
-.mainLogin{
+.mainLogin {
     height: 68.3vh;
 }
 
@@ -562,4 +562,25 @@ label {
     .cajaUl {
         flex-direction: column;
     }
+
+    .img {
+        position: inherit;
+    }
+}
+
+@media (max-width:570px) {
+
+    .contenedorNyM {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cajaIcons {
+        flex-direction: column;
+    }
+
+    .encabezado {
+        font-size: 26px;
+    }
+
 }
