@@ -1,31 +1,74 @@
-import React from 'react';
-
-const convertirValor = (moneda, divisa) => {
-  let resultado = '';
-
-  if (divisa === 'DOLAR BLUE' && moneda >= 0) {
-    let newValue = moneda / 725;
-    resultado = newValue.toFixed(2);
-  } else if (divisa === 'DOLAR' && moneda >= 0) {
-    let newValue = moneda / 365.5;
-    resultado = newValue.toFixed(2);
-  } else if (divisa === 'EUR' && moneda >= 0) {
-    let newValue = moneda / 799;
-    resultado = newValue.toFixed(2);
-  } else if (divisa === 'RENMIBINI' && moneda >= 0) {
-    let newValue = moneda / 48.69;
-    resultado = newValue.toFixed(2);
-  } else if (divisa === 'RUBLO' && moneda >= 0) {
-    let newValue = moneda / 3.68;
-    resultado = newValue.toFixed(2);
-  } else {
-    resultado = 'La conversion no se pudo realizar';
-  }
-
-  return resultado;
-};
+import { useEffect, useState } from "react";
 
 export default function ConversorForm() {
+
+  const [divisas, setDivisas] = useState({})
+  const [loading, setLoading] = useState(false)
+  const [divisasBlue, setDivisasBlue] = useState({})
+  const [loadingBlue, setLoadingBlue] = useState(false)
+
+
+  useEffect(() => {
+    fetch("https://v6.exchangerate-api.com/v6/da1b318c042de4db9b57776e/latest/USD")
+      .then(res => res.json())
+      .then(data => {
+        setDivisas(data)
+        setLoading(true)
+      }
+      )
+      .catch(err => console.log(err))
+  }, [])
+
+  useEffect(() => {
+    fetch("https://api.bluelytics.com.ar/v2/latest")
+      .then(res => res.json())
+      .then(data => {
+        setDivisasBlue(data)
+        setLoadingBlue(true)
+      }
+      )
+      .catch(err => console.log(err))
+  }, [])
+
+
+  const convertirValor = (moneda, divisa) => {
+    let resultado = '';
+    if (loading && loadingBlue) {
+      const dolarBlue = divisasBlue.blue.value_sell
+      const oficial = divisasBlue.oficial.value_sell
+      const euro = divisasBlue.blue_euro.value_sell
+
+
+      const monedas = divisas.conversion_rates
+      const peso = monedas.ARS
+      const yuan = monedas.CNY
+      const rublo = monedas.RUB
+
+      if (divisa === 'DOLAR BLUE' && moneda >= 0) {
+        let newValue = moneda / dolarBlue;
+        resultado = newValue.toFixed(2);
+      } else if (divisa === 'DOLAR' && moneda >= 0) {
+        let newValue = moneda / oficial;
+        resultado = newValue.toFixed(2);
+      } else if (divisa === 'EUR' && moneda >= 0) {
+        let newValue = moneda / euro;
+        resultado = newValue.toFixed(2);
+      } else if (divisa === 'RENMIBINI' && moneda >= 0) {
+        let newValue = moneda / peso;
+        newValue *= yuan
+        resultado = newValue.toFixed(2);
+      } else if (divisa === 'RUBLO' && moneda >= 0) {
+        let newValue = moneda / peso;
+        newValue *= rublo
+        resultado = newValue.toFixed(2);
+      } else {
+        resultado = 'La conversion no se pudo realizar';
+      }
+    }
+
+    return resultado;
+  };
+
   const handleConvertClick = () => {
     const inputValor = parseFloat(document.getElementById('moneda').value);
     const selectValue = document.getElementById('currency').value;
